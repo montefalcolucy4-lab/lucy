@@ -3,7 +3,7 @@ import time
 
 app = Flask(__name__)
 
-VERIFY_TOKEN = "luna_verify_123"
+VERIFY_TOKEN = "luna_verify_12"
 
 @app.route("/", methods=["GET"])
 def home():
