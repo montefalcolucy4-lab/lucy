@@ -3,7 +3,7 @@ import time
 
 app = Flask(__name__)
 
-VERIFY_TOKEN = "luna_verify_12"
+VERIFY_TOKEN = "luna_verify_123"
 
 @app.route("/", methods=["GET"])
 def home():
@@ -17,7 +17,7 @@ def verify():
     challenge = request.args.get("hub.challenge")
 
     if mode == "subscribe" and token == VERIFY_TOKEN:
-        return challenge
+        return str(challenge), 200
     return "Errore verifica", 403
 
 
